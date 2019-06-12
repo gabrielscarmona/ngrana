@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ul>
+{% for k, v in profile.items %}
+    <li>{{ k }}: {{ v }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

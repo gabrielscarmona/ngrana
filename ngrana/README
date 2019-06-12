@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# run environment for testing nGrana exersice
+
+# create components
+docker-compose build
+
+# run container
+docker-compose up
+
+

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>nGrana</title>
+    </head>
+    <body>
+        nGrana
+        {% if request.session.is_authenticated %}
+        <ul>
+            <li><a href="{% url "profile" %}">Profile</a></li>
+            <li><a href="{% url "logout" %}">Logout</a></li>
+        </ul>
+        {% else %}
+        <ul>
+            <li><a href="https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id={{ML_APP_ID}}">Login</a></li>
+        </ul>
+        {% endif %}
+
+        {% block content %}
+        {% endblock%}
+    </body>
+</html>
