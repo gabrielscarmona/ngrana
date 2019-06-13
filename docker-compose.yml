@@ -1,8 +1,18 @@
 version: '3'
 
 services:
+  todo-list:
+    build:
+      context: .
+      dockerfile: Dockerfile-React
+    working_dir: /ngrana/TecnicaReact-master
+    command: npm start
+    ports:
+      - "3000:3000"
   ml-auth:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile-Django
     working_dir: /ngrana/ngrana
     command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:

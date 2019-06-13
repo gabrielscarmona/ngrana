@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-# run environment for testing nGrana exercises
+# run environment for testing nGrana exercises:
+
+# test ML auth:
+# =================
 
 # create components
-docker-compose build
+docker-compose build ml-auth
 
 # run container
 docker-compose up
@@ -11,3 +14,13 @@ docker-compose up
 # go to http://localhost:8000
 
 
+# test todo list:
+# =================
+
+# create components
+docker-compose build todo-list
+
+# run container
+docker-compose up
+
+# go to http://localhost:3000
