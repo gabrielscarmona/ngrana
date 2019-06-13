@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-# run environment for testing nGrana exersice
+# run environment for testing nGrana exercises
 
 # create components
 docker-compose build
 
 # run container
 docker-compose up
+
+# go to http://localhost:8000
 
 
